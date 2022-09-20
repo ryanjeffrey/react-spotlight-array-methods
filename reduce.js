@@ -3,8 +3,7 @@
 // REQS: use .reduce
 
 export const getSneaks = (brands) => {
-  const shoesArray = brands.map((brand) => brand.shoes);
-  return shoesArray.reduce((previous, current) => previous.concat(current), []);
+  return brands.reduce((array, brands) => [...array, ...brands.shoes], []);
 };
 
 // INPUT: the array of dogs from data.js
